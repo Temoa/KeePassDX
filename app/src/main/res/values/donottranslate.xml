@@ -479,4 +479,14 @@
         <item translatable="false">@string/extended_ASCII</item>
     </string-array>
 
+    <!--
+    *******************
+    RClone settings
+    *******************
+    -->
+
+    <string name="settings_rclone_import_config" translatable="false">settings_rclone_import_config</string>
+    <string name="settings_rclone_config" translatable="false">settings_rclone_config</string>
+    <string name="settings_rclone_backup" translatable="false">settings_rclone_backup</string>
+    <string name="settings_rclone_download" translatable="false">settings_rclone_download</string>
 </resources>

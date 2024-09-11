@@ -326,6 +326,7 @@ class GroupActivity : DatabaseLockActivity(),
         databaseNavView?.apply {
             inflateMenu(R.menu.settings)
             inflateMenu(R.menu.database_extra)
+            inflateMenu(R.menu.rclone)
             inflateMenu(R.menu.about)
             setNavigationItemSelectedListener { menuItem ->
                 when (menuItem.itemId) {
@@ -350,6 +351,9 @@ class GroupActivity : DatabaseLockActivity(),
                     }
                     R.id.menu_about -> {
                         startActivity(Intent(this@GroupActivity, AboutActivity::class.java))
+                    }
+                    R.id.menu_rclone -> {
+                        RCloneActivity.launch(this@GroupActivity, true)
                     }
                 }
                 false

@@ -27,13 +27,16 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import com.kunzisoft.keepass.R
 import com.kunzisoft.keepass.activities.AboutActivity
+import com.kunzisoft.keepass.activities.RCloneActivity
 import com.kunzisoft.keepass.settings.SettingsActivity
 import com.kunzisoft.keepass.utils.UriUtil.isContributingUser
 import com.kunzisoft.keepass.utils.UriUtil.openUrl
 
 object MenuUtil {
 
-    fun defaultMenuInflater(context: Context, inflater: MenuInflater, menu: Menu) {
+    fun defaultMenuInflater(context: Context, inflater: MenuInflater, menu: Menu, showRClone: Boolean = false) {
+        if (showRClone)
+            inflater.inflate(R.menu.rclone, menu)
         inflater.inflate(R.menu.settings, menu)
         inflater.inflate(R.menu.about, menu)
         if (!context.isContributingUser())
@@ -57,6 +60,9 @@ object MenuUtil {
             R.id.menu_about -> {
                 val intent = Intent(activity, AboutActivity::class.java)
                 activity.startActivity(intent)
+            }
+            R.id.menu_rclone -> {
+                RCloneActivity.launch(activity, timeoutEnable)
             }
         }
     }

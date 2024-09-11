@@ -194,6 +194,7 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.kunzisoft.keepass.activities.RCloneActivity" />
 
         <service
             android:name="com.kunzisoft.keepass.services.DatabaseTaskNotificationService"

@@ -380,7 +380,7 @@ class FileDatabaseSelectActivity : DatabaseModeActivity(),
         super.onCreateOptionsMenu(menu)
 
         if (mSpecialMode == SpecialMode.DEFAULT) {
-            MenuUtil.defaultMenuInflater(this, menuInflater, menu)
+            MenuUtil.defaultMenuInflater(this, menuInflater, menu, showRClone = true)
         }
 
         Handler(Looper.getMainLooper()).post {
